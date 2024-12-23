@@ -352,7 +352,10 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        // Tuş basıldığı an; şimdilik bir eylem yapmıyoruz
+        int keyCode = e.getKeyCode();
+        if (keyCode == KeyEvent.VK_ESCAPE) {
+            System.exit(0);
+        }
     }
 
     @Override
